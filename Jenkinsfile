@@ -4,11 +4,18 @@ pipeline {
     tools {nodejs "nodejs"}
 
     stages {
-        stage('Example') {
+        stage('build') {
             steps {
                 sh 'npm config ls'
             }
-
+            steps {
+                sh 'bash detox_install.sh'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'bash detox_tests.sh'
+            }
         }
     }
 }
