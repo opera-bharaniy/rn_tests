@@ -7,8 +7,6 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm config ls'
-            }
-            steps {
                 sh 'bash detox_install.sh'
             }
         }
