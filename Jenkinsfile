@@ -8,12 +8,13 @@ pipeline {
             steps {
                 sh 'npm config ls'
                 sh 'bash detox_install.sh'
-            }
-        }
-        stage('test') {
-            steps {
                 sh 'bash detox_tests.sh'
             }
         }
+        // stage('test') {
+        //     steps {
+        //         sh 'bash detox_tests.sh'
+        //     }
+        // }
     }
 }
