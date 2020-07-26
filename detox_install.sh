@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "---------Installing detox-cli------------"
-npm install detox-cli --save-dev
+# npm install detox-cli --save-dev
+npm install -g detox-cli
 
 echo "---------check wether we have detox-cli in the node modules or not!------------"
 FILE=node_modules/detox-cli
@@ -24,9 +25,3 @@ fi
 
 echo "----------Install Jest-circus Test runner-----------------"
 npm install jest jest-circus --save-dev
-
-echo "------------Build the detox tests---------------"
-detox build -c ios.sim.debug
-
-echo "------------Run the detox tests---------------"
-detox test -c ios.sim.debug
