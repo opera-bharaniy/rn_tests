@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm config ls'
-                sh 'bash detox_install.sh'
+                sh 'npm install'
+                sh 'detox build -c android.debug'
             }
         }
         stage('test') {
             steps {
-                sh 'bash detox_tests.sh'
+                sh 'detox test -c android.debug'
             }
         }
     }

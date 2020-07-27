@@ -46,7 +46,7 @@
         "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
         "type": "android.emulator",
         "device": {
-          "avdName": "Nexus_5"
+          "avdName": "Pixel_2_API_30"
         }
       }
     }
